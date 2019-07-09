@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message EchoIn {
+    string msg = 1;
+    int32 order = 2;
+}
+
+message EchoOut {
+    string msg = 1;
+    int32 order = 2;
+}
+
+service Echo {
+    rpc Echo(EchoIn) returns (EchoOut){};
+}
